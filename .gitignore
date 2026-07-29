@@ -1,0 +1,21 @@
+# Secrets — ne jamais versionner
+Secrets.xcconfig
+*.p12
+*.mobileprovision
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+.swiftpm/
+
+# Swift Package Manager
+Core/.build/
+.build/
+Package.resolved
+
+# macOS
+.DS_Store
