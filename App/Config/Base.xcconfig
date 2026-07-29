@@ -1,0 +1,35 @@
+// Réglages communs à toutes les configurations de VéloBoucle.
+//
+// La clé d'accès au moteur de routage est injectée depuis `Secrets.xcconfig`,
+// à la racine du dépôt et volontairement non versionné.
+//
+// `#include?` (avec le point d'interrogation) n'échoue pas si le fichier est
+// absent : le projet se compile donc sans clé, et l'application démarre alors
+// en mode démonstration. C'est ce qui permet de cloner le dépôt et de lancer
+// l'application immédiatement, sans configuration préalable.
+#include? "../../Secrets.xcconfig"
+
+// Valeur de repli si Secrets.xcconfig n'existe pas ou ne définit rien.
+ORS_API_KEY = $(inherited)
+
+PRODUCT_NAME = $(TARGET_NAME)
+MARKETING_VERSION = 0.5.0
+CURRENT_PROJECT_VERSION = 1
+
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
+SWIFT_VERSION = 5.0
+TARGETED_DEVICE_FAMILY = 1,2
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator
+DEVELOPMENT_LANGUAGE = fr
+
+// Aucune équipe n'est fixée ici : chacun renseigne la sienne dans Xcode
+// (onglet « Signing & Capabilities »). Voir docs/INSTALL.md.
+CODE_SIGN_STYLE = Automatic
+
+CLANG_ENABLE_MODULES = YES
+CLANG_ENABLE_OBJC_ARC = YES
+ENABLE_STRICT_OBJC_MSGSEND = YES
+GCC_NO_COMMON_BLOCKS = YES
+SWIFT_EMIT_LOC_STRINGS = YES
+ENABLE_USER_SCRIPT_SANDBOXING = YES
+ALWAYS_SEARCH_USER_PATHS = NO

@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7947A1BECE57230E29F6E07 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DA75F7DECA0853F34C8146 /* AppDependencies.swift */; };
+		05FE455F797A3904FCFDBDC8 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CCE8F75A7ACD9AF03C605F /* AppSettings.swift */; };
+		787DDE7C1D9CEE39823672CD /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420763CC50A3DACBBCFFD71 /* RootView.swift */; };
+		B6BA5913607BD73B442E076D /* VeloBoucleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528AF2D094B828A0211B1C5 /* VeloBoucleApp.swift */; };
+		CDF8F781A576574788E12427 /* DemoRideSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B00FD34549A8EEAE5AD51FE /* DemoRideSimulator.swift */; };
+		C55CB270E511E816C3FDD902 /* UITestingSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3850AE322D3B93C43EA0B /* UITestingSupport.swift */; };
+		4415ECE2355D609A05345017 /* PlannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4360FBEA13626EE41D8017D /* PlannerViewModel.swift */; };
+		B63A4F139FC78A4398E4E810 /* RideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958BF1A21DC240F86A3A51B /* RideViewModel.swift */; };
+		37A36B5A692FCE511CC80B63 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2CF5F1914BED5B76BC3EC8 /* PersistenceService.swift */; };
+		286218C0BED09CB74C6DE9C2 /* StoredRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D21804919CBC699552C746 /* StoredRide.swift */; };
+		01ACE6A757EFAFE215E51A20 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F416959E8F17CCC6062F4 /* Strings.swift */; };
+		A7B6F4FDA7E712F0BA8ED396 /* AppLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F694646802E57A7C15D64A /* AppLog.swift */; };
+		1AE5B6F332B648A75155AD1F /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A792E3D7A0E6777278F0C9C1 /* HapticService.swift */; };
+		231F16782B9E887BEA027DFE /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A2180B06A9BB5573A06C75 /* LocationService.swift */; };
+		5989EE0307D9550EC8C79461 /* SecretsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA1667CA5599AF069F5ED4 /* SecretsProvider.swift */; };
+		1950E133CC7B7000619238E1 /* SpeechInstructionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0BE88F10AFC0672DEEB848 /* SpeechInstructionService.swift */; };
+		541AEA76C36DEAA897DF57F2 /* HistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114CB7DB50B249A54BD0AE0 /* HistoryScreen.swift */; };
+		F69EB2E352EBF2EB62A69803 /* RideDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3005667D366550A749F17708 /* RideDetailScreen.swift */; };
+		BC5B2D8D7F60259B5B55E37B /* RouteMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68261E37B1D2753EB8F11B46 /* RouteMapView.swift */; };
+		6E38A4AEB01CFFE1C40C4488 /* PlannerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810755EC50D6583CF241B44F /* PlannerScreen.swift */; };
+		75352357469B60FEE8EECAF1 /* RouteComparisonSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15608E5FF431E981A007D494 /* RouteComparisonSheet.swift */; };
+		A57627698F910529295D3BBD /* RoutePreviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6945FB7832FB0DB8A3E1CA4D /* RoutePreviewScreen.swift */; };
+		12518A4A1548C2528AB6DCE9 /* RideNavigationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1657C830C80BF97918B52C2 /* RideNavigationScreen.swift */; };
+		49074074DEB498DE300EBECB /* RideSummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FA9C49EA0A8EDA6BE952F /* RideSummaryScreen.swift */; };
+		FF8ECED76469A57DBAC0D13B /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E2988A536EB701DCA16 /* SettingsScreen.swift */; };
+		C5B30C26A0A1CDBF297E3551 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120C11CF488099AB27834E4 /* SharedComponents.swift */; };
+		0DB10CE11BE4E5D111739A65 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F3B173C37DD886B5DF9A5 /* Theme.swift */; };
+		9C46D6A1C094979A3E374B5D /* AppLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C44B27B483DD4940CA538D /* AppLayerTests.swift */; };
+		D6788BCA97F74EBA9167246D /* VeloBoucleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE263ADEE99B9FA86CB6B0 /* VeloBoucleUITests.swift */; };
+		6B5E135EA228098DECBD8A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5AAF70A8C28286E3A01D26 /* Assets.xcassets */; };
+		8D10D1C263161143D0CF66F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EE97C96BF878EED81C322BE /* Localizable.strings */; };
+		70B439C343AC355FFD1F15D7 /* VeloCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0C7CCA4249DC8C88964DE717 /* VeloCore */; };
+		AF2074F5D532BBBA12D32438 /* VeloCore in Frameworks */ = {isa = PBXBuildFile; productRef = BB95D9EC1B6E4E81DE71FB80 /* VeloCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		336CD21A5EBC85E0D0DD564D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E8E90F94AD72C1749FD9FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CEB11C24697BA5445CF9C2C;
+			remoteInfo = VeloBoucle;
+		};
+		E566D3457FC657BF32652F49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E8E90F94AD72C1749FD9FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CEB11C24697BA5445CF9C2C;
+			remoteInfo = VeloBoucle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		82DA75F7DECA0853F34C8146 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDependencies.swift"; sourceTree = "<group>"; };
+		D2CCE8F75A7ACD9AF03C605F /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppSettings.swift"; sourceTree = "<group>"; };
+		8420763CC50A3DACBBCFFD71 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootView.swift"; sourceTree = "<group>"; };
+		F528AF2D094B828A0211B1C5 /* VeloBoucleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VeloBoucleApp.swift"; sourceTree = "<group>"; };
+		7B00FD34549A8EEAE5AD51FE /* DemoRideSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DemoRideSimulator.swift"; sourceTree = "<group>"; };
+		3EE3850AE322D3B93C43EA0B /* UITestingSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITestingSupport.swift"; sourceTree = "<group>"; };
+		D4360FBEA13626EE41D8017D /* PlannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlannerViewModel.swift"; sourceTree = "<group>"; };
+		5958BF1A21DC240F86A3A51B /* RideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideViewModel.swift"; sourceTree = "<group>"; };
+		EE2CF5F1914BED5B76BC3EC8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceService.swift"; sourceTree = "<group>"; };
+		C9D21804919CBC699552C746 /* StoredRide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoredRide.swift"; sourceTree = "<group>"; };
+		8F5AAF70A8C28286E3A01D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		F68F416959E8F17CCC6062F4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings.swift"; sourceTree = "<group>"; };
+		C5F694646802E57A7C15D64A /* AppLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppLog.swift"; sourceTree = "<group>"; };
+		A792E3D7A0E6777278F0C9C1 /* HapticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HapticService.swift"; sourceTree = "<group>"; };
+		03A2180B06A9BB5573A06C75 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationService.swift"; sourceTree = "<group>"; };
+		1DCA1667CA5599AF069F5ED4 /* SecretsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecretsProvider.swift"; sourceTree = "<group>"; };
+		7F0BE88F10AFC0672DEEB848 /* SpeechInstructionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeechInstructionService.swift"; sourceTree = "<group>"; };
+		1114CB7DB50B249A54BD0AE0 /* HistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryScreen.swift"; sourceTree = "<group>"; };
+		3005667D366550A749F17708 /* RideDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideDetailScreen.swift"; sourceTree = "<group>"; };
+		68261E37B1D2753EB8F11B46 /* RouteMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteMapView.swift"; sourceTree = "<group>"; };
+		810755EC50D6583CF241B44F /* PlannerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlannerScreen.swift"; sourceTree = "<group>"; };
+		15608E5FF431E981A007D494 /* RouteComparisonSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteComparisonSheet.swift"; sourceTree = "<group>"; };
+		6945FB7832FB0DB8A3E1CA4D /* RoutePreviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoutePreviewScreen.swift"; sourceTree = "<group>"; };
+		D1657C830C80BF97918B52C2 /* RideNavigationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideNavigationScreen.swift"; sourceTree = "<group>"; };
+		024FA9C49EA0A8EDA6BE952F /* RideSummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideSummaryScreen.swift"; sourceTree = "<group>"; };
+		49824E2988A536EB701DCA16 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsScreen.swift"; sourceTree = "<group>"; };
+		C120C11CF488099AB27834E4 /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SharedComponents.swift"; sourceTree = "<group>"; };
+		1E3F3B173C37DD886B5DF9A5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme.swift"; sourceTree = "<group>"; };
+		B6C44B27B483DD4940CA538D /* AppLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppLayerTests.swift"; sourceTree = "<group>"; };
+		6BEE263ADEE99B9FA86CB6B0 /* VeloBoucleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VeloBoucleUITests.swift"; sourceTree = "<group>"; };
+		C092F0D5933AED7488633DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228D3144B7C92F118D868C81 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4DB01C61260E2CD4744F6944 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		18665BD06D3C8B757BA69571 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		37E4D7710C68DDD8309C8ABF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B516DEBE0E8B84F812DA77BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D2059B8458137646EDB89393 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2DA8427D3DB0CD1FCAD63FF4 /* VeloBoucle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeloBoucle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61BEBDC8E3F05FB5598697C3 /* VeloBoucleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeloBoucleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7524139C89780FE3491A98 /* VeloBoucleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeloBoucleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXVariantGroup section */
+		7EE97C96BF878EED81C322BE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37E4D7710C68DDD8309C8ABF /* fr */,
+				B516DEBE0E8B84F812DA77BD /* en */,
+				D2059B8458137646EDB89393 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin PBXGroup section */
+		FF93D09053FCF7FA032920A6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				82DA75F7DECA0853F34C8146 /* AppDependencies.swift */,
+				D2CCE8F75A7ACD9AF03C605F /* AppSettings.swift */,
+				8420763CC50A3DACBBCFFD71 /* RootView.swift */,
+				F528AF2D094B828A0211B1C5 /* VeloBoucleApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4A39A66220CDEF6F1D915B22 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				7B00FD34549A8EEAE5AD51FE /* DemoRideSimulator.swift */,
+				3EE3850AE322D3B93C43EA0B /* UITestingSupport.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		640AC0F601A710DC03A9A7A3 /* Planner */ = {
+			isa = PBXGroup;
+			children = (
+				D4360FBEA13626EE41D8017D /* PlannerViewModel.swift */,
+			);
+			path = Planner;
+			sourceTree = "<group>";
+		};
+		4020D04FA80B175954B6FB82 /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				5958BF1A21DC240F86A3A51B /* RideViewModel.swift */,
+			);
+			path = Ride;
+			sourceTree = "<group>";
+		};
+		5ED6310E009AE9755CA50B09 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				640AC0F601A710DC03A9A7A3 /* Planner */,
+				4020D04FA80B175954B6FB82 /* Ride */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		1AD3C9D6666AE854838C4331 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				EE2CF5F1914BED5B76BC3EC8 /* PersistenceService.swift */,
+				C9D21804919CBC699552C746 /* StoredRide.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		EA88B3CB6FB0B6C30D7AD93F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F68F416959E8F17CCC6062F4 /* Strings.swift */,
+				8F5AAF70A8C28286E3A01D26 /* Assets.xcassets */,
+				C092F0D5933AED7488633DD7 /* Info.plist */,
+				7EE97C96BF878EED81C322BE /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3153D3A1E55A855FE6573F75 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C5F694646802E57A7C15D64A /* AppLog.swift */,
+				A792E3D7A0E6777278F0C9C1 /* HapticService.swift */,
+				03A2180B06A9BB5573A06C75 /* LocationService.swift */,
+				1DCA1667CA5599AF069F5ED4 /* SecretsProvider.swift */,
+				7F0BE88F10AFC0672DEEB848 /* SpeechInstructionService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A0D31D1CD12329B39FF25032 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				1114CB7DB50B249A54BD0AE0 /* HistoryScreen.swift */,
+				3005667D366550A749F17708 /* RideDetailScreen.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		7E7C9C1DAB1DAB92B341C5CE /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				68261E37B1D2753EB8F11B46 /* RouteMapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		621FC2AB4131B21AE71E195D /* Planner */ = {
+			isa = PBXGroup;
+			children = (
+				810755EC50D6583CF241B44F /* PlannerScreen.swift */,
+				15608E5FF431E981A007D494 /* RouteComparisonSheet.swift */,
+				6945FB7832FB0DB8A3E1CA4D /* RoutePreviewScreen.swift */,
+			);
+			path = Planner;
+			sourceTree = "<group>";
+		};
+		AFAB792C6A186C0E7E101FC5 /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				D1657C830C80BF97918B52C2 /* RideNavigationScreen.swift */,
+				024FA9C49EA0A8EDA6BE952F /* RideSummaryScreen.swift */,
+			);
+			path = Ride;
+			sourceTree = "<group>";
+		};
+		FEF4687798D7B41934CA3149 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				49824E2988A536EB701DCA16 /* SettingsScreen.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7848BCF0525473728CB71FBE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C120C11CF488099AB27834E4 /* SharedComponents.swift */,
+				1E3F3B173C37DD886B5DF9A5 /* Theme.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		00923D7C0BF502B28DCEF297 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0D31D1CD12329B39FF25032 /* History */,
+				7E7C9C1DAB1DAB92B341C5CE /* Map */,
+				621FC2AB4131B21AE71E195D /* Planner */,
+				AFAB792C6A186C0E7E101FC5 /* Ride */,
+				FEF4687798D7B41934CA3149 /* Settings */,
+				7848BCF0525473728CB71FBE /* Shared */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EB7C80AE24065A1E583CD4C7 /* VeloBoucle */ = {
+			isa = PBXGroup;
+			children = (
+				FF93D09053FCF7FA032920A6 /* App */,
+				4A39A66220CDEF6F1D915B22 /* Demo */,
+				5ED6310E009AE9755CA50B09 /* Features */,
+				1AD3C9D6666AE854838C4331 /* Persistence */,
+				EA88B3CB6FB0B6C30D7AD93F /* Resources */,
+				3153D3A1E55A855FE6573F75 /* Services */,
+				00923D7C0BF502B28DCEF297 /* Views */,
+			);
+			path = VeloBoucle;
+			sourceTree = "<group>";
+		};
+		A0FC3A908C549FFECE1BACC7 /* VeloBoucleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6C44B27B483DD4940CA538D /* AppLayerTests.swift */,
+			);
+			path = VeloBoucleTests;
+			sourceTree = "<group>";
+		};
+		B09A74849C2A9D5FA6FA9ED3 /* VeloBoucleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6BEE263ADEE99B9FA86CB6B0 /* VeloBoucleUITests.swift */,
+			);
+			path = VeloBoucleUITests;
+			sourceTree = "<group>";
+		};
+		88427A1B1B4BBADDE600D482 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				18665BD06D3C8B757BA69571 /* Base.xcconfig */,
+				228D3144B7C92F118D868C81 /* Debug.xcconfig */,
+				4DB01C61260E2CD4744F6944 /* Release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		C863DA5204F95EC573510473 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DA8427D3DB0CD1FCAD63FF4 /* VeloBoucle.app */,
+				61BEBDC8E3F05FB5598697C3 /* VeloBoucleTests.xctest */,
+				4C7524139C89780FE3491A98 /* VeloBoucleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95CF1C93C1577D2E504B55E1 = {
+			isa = PBXGroup;
+			children = (
+				88427A1B1B4BBADDE600D482 /* Config */,
+				EB7C80AE24065A1E583CD4C7 /* VeloBoucle */,
+				A0FC3A908C549FFECE1BACC7 /* VeloBoucleTests */,
+				B09A74849C2A9D5FA6FA9ED3 /* VeloBoucleUITests */,
+				C863DA5204F95EC573510473 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23517B322A66E14D2E178586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70B439C343AC355FFD1F15D7 /* VeloCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		172E9C906A88BAA807CF7F6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2074F5D532BBBA12D32438 /* VeloCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE08EDFB888D1B22A9BDD14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7099FF8DA19CE608769444B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7947A1BECE57230E29F6E07 /* AppDependencies.swift in Sources */,
+				05FE455F797A3904FCFDBDC8 /* AppSettings.swift in Sources */,
+				787DDE7C1D9CEE39823672CD /* RootView.swift in Sources */,
+				B6BA5913607BD73B442E076D /* VeloBoucleApp.swift in Sources */,
+				CDF8F781A576574788E12427 /* DemoRideSimulator.swift in Sources */,
+				C55CB270E511E816C3FDD902 /* UITestingSupport.swift in Sources */,
+				4415ECE2355D609A05345017 /* PlannerViewModel.swift in Sources */,
+				B63A4F139FC78A4398E4E810 /* RideViewModel.swift in Sources */,
+				37A36B5A692FCE511CC80B63 /* PersistenceService.swift in Sources */,
+				286218C0BED09CB74C6DE9C2 /* StoredRide.swift in Sources */,
+				01ACE6A757EFAFE215E51A20 /* Strings.swift in Sources */,
+				A7B6F4FDA7E712F0BA8ED396 /* AppLog.swift in Sources */,
+				1AE5B6F332B648A75155AD1F /* HapticService.swift in Sources */,
+				231F16782B9E887BEA027DFE /* LocationService.swift in Sources */,
+				5989EE0307D9550EC8C79461 /* SecretsProvider.swift in Sources */,
+				1950E133CC7B7000619238E1 /* SpeechInstructionService.swift in Sources */,
+				541AEA76C36DEAA897DF57F2 /* HistoryScreen.swift in Sources */,
+				F69EB2E352EBF2EB62A69803 /* RideDetailScreen.swift in Sources */,
+				BC5B2D8D7F60259B5B55E37B /* RouteMapView.swift in Sources */,
+				6E38A4AEB01CFFE1C40C4488 /* PlannerScreen.swift in Sources */,
+				75352357469B60FEE8EECAF1 /* RouteComparisonSheet.swift in Sources */,
+				A57627698F910529295D3BBD /* RoutePreviewScreen.swift in Sources */,
+				12518A4A1548C2528AB6DCE9 /* RideNavigationScreen.swift in Sources */,
+				49074074DEB498DE300EBECB /* RideSummaryScreen.swift in Sources */,
+				FF8ECED76469A57DBAC0D13B /* SettingsScreen.swift in Sources */,
+				C5B30C26A0A1CDBF297E3551 /* SharedComponents.swift in Sources */,
+				0DB10CE11BE4E5D111739A65 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1950F37F7DA15D3434A13447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C46D6A1C094979A3E374B5D /* AppLayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5A18DF73D04C738FD3D2FDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6788BCA97F74EBA9167246D /* VeloBoucleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0616D1FCD83DC98B0FF2583B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5E135EA228098DECBD8A14 /* Assets.xcassets in Resources */,
+				8D10D1C263161143D0CF66F5 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D6BAAF4974F8500A0AFF07F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA39E78852B8B32BD4E5224 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D22D654436B05A20F48FD3EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CEB11C24697BA5445CF9C2C /* VeloBoucle */;
+			targetProxy = 336CD21A5EBC85E0D0DD564D /* PBXContainerItemProxy */;
+		};
+		FF1F7AB506686F58FDCB2891 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CEB11C24697BA5445CF9C2C /* VeloBoucle */;
+			targetProxy = E566D3457FC657BF32652F49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXNativeTarget section */
+		4CEB11C24697BA5445CF9C2C /* VeloBoucle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AC7D445A38672DB2C2CB3D9 /* Build configuration list for PBXNativeTarget "VeloBoucle" */;
+			buildPhases = (
+				7099FF8DA19CE608769444B5 /* Sources */,
+				23517B322A66E14D2E178586 /* Frameworks */,
+				0616D1FCD83DC98B0FF2583B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VeloBoucle;
+			packageProductDependencies = (
+				0C7CCA4249DC8C88964DE717 /* VeloCore */,
+			);
+			productName = VeloBoucle;
+			productReference = 2DA8427D3DB0CD1FCAD63FF4 /* VeloBoucle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		82E7C72B241B0E93CA7454A0 /* VeloBoucleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43426349E6CBE44FEC18F1BC /* Build configuration list for PBXNativeTarget "VeloBoucleTests" */;
+			buildPhases = (
+				1950F37F7DA15D3434A13447 /* Sources */,
+				172E9C906A88BAA807CF7F6D /* Frameworks */,
+				6D6BAAF4974F8500A0AFF07F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D22D654436B05A20F48FD3EF /* PBXTargetDependency */,
+			);
+			name = VeloBoucleTests;
+			packageProductDependencies = (
+				BB95D9EC1B6E4E81DE71FB80 /* VeloCore */,
+			);
+			productName = VeloBoucleTests;
+			productReference = 61BEBDC8E3F05FB5598697C3 /* VeloBoucleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2319E3C00E41B7B5B8A406BC /* VeloBoucleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65225EF2CB95F53B7588048E /* Build configuration list for PBXNativeTarget "VeloBoucleUITests" */;
+			buildPhases = (
+				C5A18DF73D04C738FD3D2FDD /* Sources */,
+				BE08EDFB888D1B22A9BDD14F /* Frameworks */,
+				DCA39E78852B8B32BD4E5224 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF1F7AB506686F58FDCB2891 /* PBXTargetDependency */,
+			);
+			name = VeloBoucleUITests;
+			productName = VeloBoucleUITests;
+			productReference = 4C7524139C89780FE3491A98 /* VeloBoucleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E8E90F94AD72C1749FD9FA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					4CEB11C24697BA5445CF9C2C = { CreatedOnToolsVersion = 15.2; };
+					82E7C72B241B0E93CA7454A0 = { CreatedOnToolsVersion = 15.2; TestTargetID = 4CEB11C24697BA5445CF9C2C; };
+					2319E3C00E41B7B5B8A406BC = { CreatedOnToolsVersion = 15.2; TestTargetID = 4CEB11C24697BA5445CF9C2C; };
+				};
+			};
+			buildConfigurationList = 4E541A75B7C47BEDE67A27A1 /* Build configuration list for PBXProject "VeloBoucle" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = fr;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				fr,
+				de,
+				Base,
+			);
+			mainGroup = 95CF1C93C1577D2E504B55E1;
+			packageReferences = (
+				A6A9AE77988A6701C89AB92F /* XCLocalSwiftPackageReference "../Core" */,
+			);
+			productRefGroup = C863DA5204F95EC573510473 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CEB11C24697BA5445CF9C2C /* VeloBoucle */,
+				82E7C72B241B0E93CA7454A0 /* VeloBoucleTests */,
+				2319E3C00E41B7B5B8A406BC /* VeloBoucleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A6A9AE77988A6701C89AB92F /* XCLocalSwiftPackageReference "../Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Core;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C7CCA4249DC8C88964DE717 /* VeloCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VeloCore;
+		};
+		BB95D9EC1B6E4E81DE71FB80 /* VeloCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VeloCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCBuildConfiguration section */
+		702A5D52567EC23B09AB1ED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 228D3144B7C92F118D868C81 /* Debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+			};
+			name = Debug;
+		};
+		A0C59108B84B77928EEB3016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 228D3144B7C92F118D868C81 /* Debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VeloBoucle/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.veloboucle.app;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		0F267B70967AAAB5A0F35EEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 228D3144B7C92F118D868C81 /* Debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.veloboucle.app.tests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeloBoucle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VeloBoucle";
+			};
+			name = Debug;
+		};
+		9333CE2A94292937A406ACC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 228D3144B7C92F118D868C81 /* Debug.xcconfig */;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.veloboucle.app.uitests;
+				TEST_TARGET_NAME = VeloBoucle;
+			};
+			name = Debug;
+		};
+		E8575F7B09FF4213AEFAC743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB01C61260E2CD4744F6944 /* Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+			};
+			name = Release;
+		};
+		6A743FC5E5FFB84CB3840C16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB01C61260E2CD4744F6944 /* Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VeloBoucle/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.veloboucle.app;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		224B973E6DB0B475B0CB989A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB01C61260E2CD4744F6944 /* Release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.veloboucle.app.tests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeloBoucle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VeloBoucle";
+			};
+			name = Release;
+		};
+		25F4213B3E9D8881DB6FA4C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB01C61260E2CD4744F6944 /* Release.xcconfig */;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.veloboucle.app.uitests;
+				TEST_TARGET_NAME = VeloBoucle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E541A75B7C47BEDE67A27A1 /* Build configuration list for PBXProject "VeloBoucle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				702A5D52567EC23B09AB1ED8 /* Debug */,
+				E8575F7B09FF4213AEFAC743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AC7D445A38672DB2C2CB3D9 /* Build configuration list for PBXNativeTarget "VeloBoucle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C59108B84B77928EEB3016 /* Debug */,
+				6A743FC5E5FFB84CB3840C16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43426349E6CBE44FEC18F1BC /* Build configuration list for PBXNativeTarget "VeloBoucleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F267B70967AAAB5A0F35EEE /* Debug */,
+				224B973E6DB0B475B0CB989A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65225EF2CB95F53B7588048E /* Build configuration list for PBXNativeTarget "VeloBoucleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9333CE2A94292937A406ACC6 /* Debug */,
+				25F4213B3E9D8881DB6FA4C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E8E90F94AD72C1749FD9FA3 /* Project object */;
+}

@@ -1,0 +1,194 @@
+/* VéloBoucle — textes de l'interface.
+   Langue : fr.
+   Fichier généré par Scripts/extract_strings.py à partir de Strings.swift.
+   Les traductions existantes sont conservées ; seules les clés nouvelles
+   sont ajoutées. */
+
+/* MARK: common */
+"common.cancel" = "Annuler";
+"common.validate" = "Valider";
+"common.close" = "Fermer";
+"common.dismiss" = "Masquer";
+"common.retry" = "Réessayer";
+"common.save" = "Enregistrer";
+"common.delete" = "Supprimer";
+"common.rename" = "Renommer";
+"common.share" = "Partager";
+"common.other" = "Autre";
+"common.back" = "Retour";
+"common.estimate" = "estimation";
+/* MARK: detail */
+"detail.distance" = "Distance";
+"detail.duration" = "Durée";
+"detail.date" = "Date";
+"detail.startTime" = "Départ";
+/* MARK: map */
+"map.start" = "Départ";
+"map.finish" = "Arrivée";
+"map.chosenStart" = "Départ choisi";
+"map.currentPosition" = "Votre position";
+/* MARK: tabs */
+"tabs.planner" = "Parcours";
+"tabs.ride" = "Sortie";
+"tabs.history" = "Historique";
+"tabs.settings" = "Réglages";
+/* MARK: planner */
+"planner.title" = "Créer une boucle";
+"planner.distance.title" = "Distance souhaitée";
+"planner.generate" = "Créer une boucle";
+"planner.recenter" = "Recentrer la carte";
+"planner.chooseStart" = "Choisir le départ";
+"planner.useCurrentLocation" = "Partir d'ici";
+"planner.pickStart.hint" = "Touchez la carte pour placer votre point de départ.";
+"planner.customDistance.title" = "Distance libre";
+"planner.customDistance.message" = "Indiquez une distance en kilomètres, entre 2 et 300.";
+"planner.customDistance.placeholder" = "Kilomètres";
+"planner.distance.accessibility" = "Boucle de %@";
+/* MARK: generation */
+"generation.title" = "Recherche de circuits";
+"generation.explanation" = "Plusieurs circuits sont calculés puis comparés pour retenir ceux qui approchent le mieux votre distance.";
+"generation.cancel" = "Annuler la recherche";
+"generation.progress" = "%d circuit(s) analysé(s) sur %d";
+/* MARK: comparison */
+"comparison.title" = "Choisissez votre circuit";
+"comparison.recommended" = "Recommandé";
+"comparison.alternative" = "Alternatif %d";
+"comparison.select" = "Choisir ce circuit";
+"comparison.regenerate" = "Générer d'autres circuits";
+"comparison.cyclePathShare" = "Pistes cyclables";
+"comparison.surface" = "Revêtement";
+"comparison.surface.paved" = "Goudronné";
+"comparison.surface.mixed" = "Mixte";
+/* MARK: preview */
+"preview.title" = "Votre circuit";
+"preview.start" = "Démarrer la navigation";
+"preview.instructions" = "Principales indications";
+"preview.regenerate" = "Générer d'autres circuits";
+"preview.exportGPX" = "Exporter en GPX";
+"preview.noInstructions" = "Ce circuit ne comporte aucun changement de direction notable.";
+"preview.moreInstructions" = "et %d autre(s) indication(s)";
+/* MARK: ride */
+"ride.none.title" = "Aucune sortie en cours";
+"ride.none.message" = "Créez une boucle depuis l'onglet Parcours, puis appuyez sur « Démarrer la navigation ».";
+"ride.free" = "Rouler sans circuit";
+"ride.pause" = "Pause";
+"ride.resume" = "Reprendre";
+"ride.finish" = "Terminer";
+"ride.recenter" = "Recentrer";
+"ride.showWholeRoute" = "Voir tout le parcours";
+"ride.northUp" = "Nord en haut";
+"ride.headingUp" = "Sens de marche";
+"ride.offRoute.title" = "Vous avez quitté le parcours";
+"ride.recalculate" = "Recalculer";
+"ride.recalculating" = "Recalcul en cours…";
+"ride.keepGoing" = "Continuer sans recalculer";
+"ride.speed" = "Vitesse";
+"ride.averageSpeed" = "Moyenne";
+"ride.distanceCovered" = "Parcourus";
+"ride.remainingDistance" = "Restants";
+"ride.elapsed" = "Temps";
+"ride.arrivalTime" = "Arrivée";
+"ride.finish.confirm" = "Terminer la sortie ?";
+"ride.finish.message" = "La sortie sera enregistrée et vous pourrez la retrouver dans l'historique.";
+"ride.offRoute.message" = "Voulez-vous calculer un itinéraire pour rejoindre la suite du parcours ?";
+"ride.offRoute.distance" = "à %@ du parcours";
+"ride.thenOn" = "puis %@";
+/* MARK: summary */
+"summary.title" = "Sortie terminée";
+"summary.nameField" = "Nom de la sortie";
+"summary.save" = "Enregistrer la sortie";
+"summary.discard" = "Ne pas enregistrer";
+"summary.calories" = "Calories";
+"summary.maxSpeed" = "Vitesse max.";
+"summary.movingTime" = "Temps de déplacement";
+"summary.ascent" = "Dénivelé +";
+"summary.descent" = "Dénivelé −";
+"summary.deviations" = "Écarts de parcours";
+"summary.calories.disclaimer" = "Les calories sont une estimation calculée à partir de votre poids et du temps de déplacement. Elles ne remplacent pas une mesure.";
+"summary.deviationCount" = "%d écart(s) par rapport au circuit";
+/* MARK: history */
+"history.title" = "Historique";
+"history.empty" = "Aucune sortie enregistrée";
+"history.empty.message" = "Vos sorties apparaîtront ici une fois terminées et enregistrées.";
+"history.search" = "Rechercher une sortie";
+"history.repeat" = "Refaire ce parcours";
+"history.importGPX" = "Importer un fichier GPX";
+"history.delete.confirm" = "Supprimer cette sortie ?";
+"history.delete.message" = "Cette action est définitive. Pensez à exporter le fichier GPX si vous souhaitez le conserver.";
+/* MARK: settings */
+"settings.title" = "Réglages";
+"settings.profile.section" = "Profil de vélo";
+"settings.route.section" = "Préférences de parcours";
+"settings.navigation.section" = "Navigation";
+"settings.location.section" = "Localisation";
+"settings.data.section" = "Cartes et données";
+"settings.about.section" = "À propos";
+"settings.avoidUnpaved" = "Éviter les chemins non goudronnés";
+"settings.rejectGravel" = "Refuser le gravier";
+"settings.preferCyclePaths" = "Privilégier les pistes cyclables";
+"settings.avoidHighTraffic" = "Éviter les routes à fort trafic";
+"settings.avoidSteepClimbs" = "Éviter les fortes montées";
+"settings.preferredDirection" = "Direction préférée";
+"settings.preferredDirection.footer" = "Indique de quel côté la boucle doit se dérouler par rapport à votre départ.";
+"settings.voiceInstructions" = "Instructions vocales";
+"settings.hapticFeedback" = "Retours haptiques";
+"settings.keepScreenAwake" = "Garder l'écran allumé";
+"settings.keepScreenAwake.footer" = "Pratique sur un guidon, mais consomme nettement plus de batterie. L'enregistrement de la sortie continue même écran éteint.";
+"settings.recalculation" = "Recalcul hors parcours";
+"settings.bodyMass" = "Poids";
+"settings.bodyMass.footer" = "Sert uniquement à estimer les calories. Cette information ne quitte jamais votre iPhone.";
+"settings.demoMode" = "Mode démonstration";
+"settings.demoMode.footer" = "Génère des circuits fictifs sans connexion ni clé d'accès. Utile pour découvrir l'application ou la tester dans le simulateur.";
+"settings.apiKey.configured" = "Clé d'accès configurée";
+"settings.apiKey.missing" = "Aucune clé d'accès";
+"settings.apiKey.footer" = "La clé OpenRouteService s'ajoute dans le fichier Secrets.xcconfig, jamais dans le code. Voir le fichier README du projet.";
+"settings.openSystem" = "Ouvrir les Réglages d'iOS";
+"settings.dataAttribution" = "Fonds de carte : Apple Plans. Calcul d'itinéraires : OpenRouteService, à partir des données OpenStreetMap (ODbL).";
+"settings.version" = "Version";
+"settings.location.whenInUse" = "Pendant l'utilisation";
+"settings.location.always" = "Toujours";
+"settings.privacy" = "Confidentialité";
+"settings.privacy.summary" = "Vos sorties, vos traces GPS et vos réglages restent sur votre iPhone. Seul le point de départ et la distance souhaitée sont envoyés au service de calcul d'itinéraires, le temps d'une requête.";
+/* MARK: location */
+"location.notDetermined" = "Localisation non autorisée";
+"location.denied" = "Localisation refusée";
+"location.restricted" = "Localisation bloquée";
+"location.reducedAccuracy" = "Position peu précise";
+"location.openSettings.hint" = "Ouvre les réglages de l'application";
+"location.why.title" = "Pourquoi la localisation ?";
+"location.why.message" = "VéloBoucle a besoin de votre position pour placer le départ de votre boucle, vous guider en temps réel et enregistrer votre sortie. Sans elle, vous pouvez encore choisir un départ à la main sur la carte.";
+"location.always.explanation" = "Pour continuer à enregistrer votre sortie écran verrouillé, autorisez la localisation « Toujours ».";
+/* MARK: recovery */
+"recovery.title" = "Sortie interrompue";
+"recovery.message" = "Une sortie n'a pas été terminée correctement. Voulez-vous la reprendre ?";
+"recovery.resume" = "Reprendre";
+"recovery.saveOnly" = "Enregistrer sans reprendre";
+"recovery.discard" = "Abandonner";
+/* MARK: demo */
+"demo.banner" = "Mode démonstration";
+"demo.banner.accessibility" = "Mode démonstration actif : les circuits affichés sont fictifs";
+"demo.simulateRide" = "Simuler un déplacement";
+"demo.simulateDetour" = "Simuler une sortie de parcours";
+"demo.stopSimulation" = "Arrêter la simulation";
+/* MARK: recovery */
+"recovery.changeDistance" = "Modifier la distance";
+"recovery.changeStart" = "Changer de départ";
+"recovery.openSettings" = "Ouvrir les réglages";
+"recovery.configureKey" = "Configurer la clé d'accès";
+"recovery.useSaved" = "Utiliser un parcours enregistré";
+"recovery.enableDemo" = "Passer en démonstration";
+/* MARK: profile */
+"profile.electricRoad" = "Vélo de route électrique";
+"profile.road" = "Vélo de route";
+"profile.regular" = "Vélo de ville";
+"profile.mountain" = "VTT";
+/* MARK: direction */
+"direction.any" = "Indifférente";
+"direction.north" = "Nord";
+"direction.east" = "Est";
+"direction.south" = "Sud";
+"direction.west" = "Ouest";
+/* MARK: recalculation */
+"recalculation.automatic" = "Automatique";
+"recalculation.ask" = "Demander d'abord";
+"recalculation.never" = "Ne pas recalculer";

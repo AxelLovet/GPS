@@ -1,0 +1,194 @@
+/* VéloBoucle — textes de l'interface.
+   Langue : en.
+   Fichier généré par Scripts/extract_strings.py à partir de Strings.swift.
+   Les traductions existantes sont conservées ; seules les clés nouvelles
+   sont ajoutées. */
+
+/* MARK: common */
+/* À TRADUIRE */ "common.cancel" = "Annuler";
+/* À TRADUIRE */ "common.validate" = "Valider";
+/* À TRADUIRE */ "common.close" = "Fermer";
+/* À TRADUIRE */ "common.dismiss" = "Masquer";
+/* À TRADUIRE */ "common.retry" = "Réessayer";
+/* À TRADUIRE */ "common.save" = "Enregistrer";
+/* À TRADUIRE */ "common.delete" = "Supprimer";
+/* À TRADUIRE */ "common.rename" = "Renommer";
+/* À TRADUIRE */ "common.share" = "Partager";
+/* À TRADUIRE */ "common.other" = "Autre";
+/* À TRADUIRE */ "common.back" = "Retour";
+/* À TRADUIRE */ "common.estimate" = "estimation";
+/* MARK: detail */
+/* À TRADUIRE */ "detail.distance" = "Distance";
+/* À TRADUIRE */ "detail.duration" = "Durée";
+/* À TRADUIRE */ "detail.date" = "Date";
+/* À TRADUIRE */ "detail.startTime" = "Départ";
+/* MARK: map */
+/* À TRADUIRE */ "map.start" = "Départ";
+/* À TRADUIRE */ "map.finish" = "Arrivée";
+/* À TRADUIRE */ "map.chosenStart" = "Départ choisi";
+/* À TRADUIRE */ "map.currentPosition" = "Votre position";
+/* MARK: tabs */
+/* À TRADUIRE */ "tabs.planner" = "Parcours";
+/* À TRADUIRE */ "tabs.ride" = "Sortie";
+/* À TRADUIRE */ "tabs.history" = "Historique";
+/* À TRADUIRE */ "tabs.settings" = "Réglages";
+/* MARK: planner */
+/* À TRADUIRE */ "planner.title" = "Créer une boucle";
+/* À TRADUIRE */ "planner.distance.title" = "Distance souhaitée";
+/* À TRADUIRE */ "planner.generate" = "Créer une boucle";
+/* À TRADUIRE */ "planner.recenter" = "Recentrer la carte";
+/* À TRADUIRE */ "planner.chooseStart" = "Choisir le départ";
+/* À TRADUIRE */ "planner.useCurrentLocation" = "Partir d'ici";
+/* À TRADUIRE */ "planner.pickStart.hint" = "Touchez la carte pour placer votre point de départ.";
+/* À TRADUIRE */ "planner.customDistance.title" = "Distance libre";
+/* À TRADUIRE */ "planner.customDistance.message" = "Indiquez une distance en kilomètres, entre 2 et 300.";
+/* À TRADUIRE */ "planner.customDistance.placeholder" = "Kilomètres";
+/* À TRADUIRE */ "planner.distance.accessibility" = "Boucle de %@";
+/* MARK: generation */
+/* À TRADUIRE */ "generation.title" = "Recherche de circuits";
+/* À TRADUIRE */ "generation.explanation" = "Plusieurs circuits sont calculés puis comparés pour retenir ceux qui approchent le mieux votre distance.";
+/* À TRADUIRE */ "generation.cancel" = "Annuler la recherche";
+/* À TRADUIRE */ "generation.progress" = "%d circuit(s) analysé(s) sur %d";
+/* MARK: comparison */
+/* À TRADUIRE */ "comparison.title" = "Choisissez votre circuit";
+/* À TRADUIRE */ "comparison.recommended" = "Recommandé";
+/* À TRADUIRE */ "comparison.alternative" = "Alternatif %d";
+/* À TRADUIRE */ "comparison.select" = "Choisir ce circuit";
+/* À TRADUIRE */ "comparison.regenerate" = "Générer d'autres circuits";
+/* À TRADUIRE */ "comparison.cyclePathShare" = "Pistes cyclables";
+/* À TRADUIRE */ "comparison.surface" = "Revêtement";
+/* À TRADUIRE */ "comparison.surface.paved" = "Goudronné";
+/* À TRADUIRE */ "comparison.surface.mixed" = "Mixte";
+/* MARK: preview */
+/* À TRADUIRE */ "preview.title" = "Votre circuit";
+/* À TRADUIRE */ "preview.start" = "Démarrer la navigation";
+/* À TRADUIRE */ "preview.instructions" = "Principales indications";
+/* À TRADUIRE */ "preview.regenerate" = "Générer d'autres circuits";
+/* À TRADUIRE */ "preview.exportGPX" = "Exporter en GPX";
+/* À TRADUIRE */ "preview.noInstructions" = "Ce circuit ne comporte aucun changement de direction notable.";
+/* À TRADUIRE */ "preview.moreInstructions" = "et %d autre(s) indication(s)";
+/* MARK: ride */
+/* À TRADUIRE */ "ride.none.title" = "Aucune sortie en cours";
+/* À TRADUIRE */ "ride.none.message" = "Créez une boucle depuis l'onglet Parcours, puis appuyez sur « Démarrer la navigation ».";
+/* À TRADUIRE */ "ride.free" = "Rouler sans circuit";
+/* À TRADUIRE */ "ride.pause" = "Pause";
+/* À TRADUIRE */ "ride.resume" = "Reprendre";
+/* À TRADUIRE */ "ride.finish" = "Terminer";
+/* À TRADUIRE */ "ride.recenter" = "Recentrer";
+/* À TRADUIRE */ "ride.showWholeRoute" = "Voir tout le parcours";
+/* À TRADUIRE */ "ride.northUp" = "Nord en haut";
+/* À TRADUIRE */ "ride.headingUp" = "Sens de marche";
+/* À TRADUIRE */ "ride.offRoute.title" = "Vous avez quitté le parcours";
+/* À TRADUIRE */ "ride.recalculate" = "Recalculer";
+/* À TRADUIRE */ "ride.recalculating" = "Recalcul en cours…";
+/* À TRADUIRE */ "ride.keepGoing" = "Continuer sans recalculer";
+/* À TRADUIRE */ "ride.speed" = "Vitesse";
+/* À TRADUIRE */ "ride.averageSpeed" = "Moyenne";
+/* À TRADUIRE */ "ride.distanceCovered" = "Parcourus";
+/* À TRADUIRE */ "ride.remainingDistance" = "Restants";
+/* À TRADUIRE */ "ride.elapsed" = "Temps";
+/* À TRADUIRE */ "ride.arrivalTime" = "Arrivée";
+/* À TRADUIRE */ "ride.finish.confirm" = "Terminer la sortie ?";
+/* À TRADUIRE */ "ride.finish.message" = "La sortie sera enregistrée et vous pourrez la retrouver dans l'historique.";
+/* À TRADUIRE */ "ride.offRoute.message" = "Voulez-vous calculer un itinéraire pour rejoindre la suite du parcours ?";
+/* À TRADUIRE */ "ride.offRoute.distance" = "à %@ du parcours";
+/* À TRADUIRE */ "ride.thenOn" = "puis %@";
+/* MARK: summary */
+/* À TRADUIRE */ "summary.title" = "Sortie terminée";
+/* À TRADUIRE */ "summary.nameField" = "Nom de la sortie";
+/* À TRADUIRE */ "summary.save" = "Enregistrer la sortie";
+/* À TRADUIRE */ "summary.discard" = "Ne pas enregistrer";
+/* À TRADUIRE */ "summary.calories" = "Calories";
+/* À TRADUIRE */ "summary.maxSpeed" = "Vitesse max.";
+/* À TRADUIRE */ "summary.movingTime" = "Temps de déplacement";
+/* À TRADUIRE */ "summary.ascent" = "Dénivelé +";
+/* À TRADUIRE */ "summary.descent" = "Dénivelé −";
+/* À TRADUIRE */ "summary.deviations" = "Écarts de parcours";
+/* À TRADUIRE */ "summary.calories.disclaimer" = "Les calories sont une estimation calculée à partir de votre poids et du temps de déplacement. Elles ne remplacent pas une mesure.";
+/* À TRADUIRE */ "summary.deviationCount" = "%d écart(s) par rapport au circuit";
+/* MARK: history */
+/* À TRADUIRE */ "history.title" = "Historique";
+/* À TRADUIRE */ "history.empty" = "Aucune sortie enregistrée";
+/* À TRADUIRE */ "history.empty.message" = "Vos sorties apparaîtront ici une fois terminées et enregistrées.";
+/* À TRADUIRE */ "history.search" = "Rechercher une sortie";
+/* À TRADUIRE */ "history.repeat" = "Refaire ce parcours";
+/* À TRADUIRE */ "history.importGPX" = "Importer un fichier GPX";
+/* À TRADUIRE */ "history.delete.confirm" = "Supprimer cette sortie ?";
+/* À TRADUIRE */ "history.delete.message" = "Cette action est définitive. Pensez à exporter le fichier GPX si vous souhaitez le conserver.";
+/* MARK: settings */
+/* À TRADUIRE */ "settings.title" = "Réglages";
+/* À TRADUIRE */ "settings.profile.section" = "Profil de vélo";
+/* À TRADUIRE */ "settings.route.section" = "Préférences de parcours";
+/* À TRADUIRE */ "settings.navigation.section" = "Navigation";
+/* À TRADUIRE */ "settings.location.section" = "Localisation";
+/* À TRADUIRE */ "settings.data.section" = "Cartes et données";
+/* À TRADUIRE */ "settings.about.section" = "À propos";
+/* À TRADUIRE */ "settings.avoidUnpaved" = "Éviter les chemins non goudronnés";
+/* À TRADUIRE */ "settings.rejectGravel" = "Refuser le gravier";
+/* À TRADUIRE */ "settings.preferCyclePaths" = "Privilégier les pistes cyclables";
+/* À TRADUIRE */ "settings.avoidHighTraffic" = "Éviter les routes à fort trafic";
+/* À TRADUIRE */ "settings.avoidSteepClimbs" = "Éviter les fortes montées";
+/* À TRADUIRE */ "settings.preferredDirection" = "Direction préférée";
+/* À TRADUIRE */ "settings.preferredDirection.footer" = "Indique de quel côté la boucle doit se dérouler par rapport à votre départ.";
+/* À TRADUIRE */ "settings.voiceInstructions" = "Instructions vocales";
+/* À TRADUIRE */ "settings.hapticFeedback" = "Retours haptiques";
+/* À TRADUIRE */ "settings.keepScreenAwake" = "Garder l'écran allumé";
+/* À TRADUIRE */ "settings.keepScreenAwake.footer" = "Pratique sur un guidon, mais consomme nettement plus de batterie. L'enregistrement de la sortie continue même écran éteint.";
+/* À TRADUIRE */ "settings.recalculation" = "Recalcul hors parcours";
+/* À TRADUIRE */ "settings.bodyMass" = "Poids";
+/* À TRADUIRE */ "settings.bodyMass.footer" = "Sert uniquement à estimer les calories. Cette information ne quitte jamais votre iPhone.";
+/* À TRADUIRE */ "settings.demoMode" = "Mode démonstration";
+/* À TRADUIRE */ "settings.demoMode.footer" = "Génère des circuits fictifs sans connexion ni clé d'accès. Utile pour découvrir l'application ou la tester dans le simulateur.";
+/* À TRADUIRE */ "settings.apiKey.configured" = "Clé d'accès configurée";
+/* À TRADUIRE */ "settings.apiKey.missing" = "Aucune clé d'accès";
+/* À TRADUIRE */ "settings.apiKey.footer" = "La clé OpenRouteService s'ajoute dans le fichier Secrets.xcconfig, jamais dans le code. Voir le fichier README du projet.";
+/* À TRADUIRE */ "settings.openSystem" = "Ouvrir les Réglages d'iOS";
+/* À TRADUIRE */ "settings.dataAttribution" = "Fonds de carte : Apple Plans. Calcul d'itinéraires : OpenRouteService, à partir des données OpenStreetMap (ODbL).";
+/* À TRADUIRE */ "settings.version" = "Version";
+/* À TRADUIRE */ "settings.location.whenInUse" = "Pendant l'utilisation";
+/* À TRADUIRE */ "settings.location.always" = "Toujours";
+/* À TRADUIRE */ "settings.privacy" = "Confidentialité";
+/* À TRADUIRE */ "settings.privacy.summary" = "Vos sorties, vos traces GPS et vos réglages restent sur votre iPhone. Seul le point de départ et la distance souhaitée sont envoyés au service de calcul d'itinéraires, le temps d'une requête.";
+/* MARK: location */
+/* À TRADUIRE */ "location.notDetermined" = "Localisation non autorisée";
+/* À TRADUIRE */ "location.denied" = "Localisation refusée";
+/* À TRADUIRE */ "location.restricted" = "Localisation bloquée";
+/* À TRADUIRE */ "location.reducedAccuracy" = "Position peu précise";
+/* À TRADUIRE */ "location.openSettings.hint" = "Ouvre les réglages de l'application";
+/* À TRADUIRE */ "location.why.title" = "Pourquoi la localisation ?";
+/* À TRADUIRE */ "location.why.message" = "VéloBoucle a besoin de votre position pour placer le départ de votre boucle, vous guider en temps réel et enregistrer votre sortie. Sans elle, vous pouvez encore choisir un départ à la main sur la carte.";
+/* À TRADUIRE */ "location.always.explanation" = "Pour continuer à enregistrer votre sortie écran verrouillé, autorisez la localisation « Toujours ».";
+/* MARK: recovery */
+/* À TRADUIRE */ "recovery.title" = "Sortie interrompue";
+/* À TRADUIRE */ "recovery.message" = "Une sortie n'a pas été terminée correctement. Voulez-vous la reprendre ?";
+/* À TRADUIRE */ "recovery.resume" = "Reprendre";
+/* À TRADUIRE */ "recovery.saveOnly" = "Enregistrer sans reprendre";
+/* À TRADUIRE */ "recovery.discard" = "Abandonner";
+/* MARK: demo */
+/* À TRADUIRE */ "demo.banner" = "Mode démonstration";
+/* À TRADUIRE */ "demo.banner.accessibility" = "Mode démonstration actif : les circuits affichés sont fictifs";
+/* À TRADUIRE */ "demo.simulateRide" = "Simuler un déplacement";
+/* À TRADUIRE */ "demo.simulateDetour" = "Simuler une sortie de parcours";
+/* À TRADUIRE */ "demo.stopSimulation" = "Arrêter la simulation";
+/* MARK: recovery */
+/* À TRADUIRE */ "recovery.changeDistance" = "Modifier la distance";
+/* À TRADUIRE */ "recovery.changeStart" = "Changer de départ";
+/* À TRADUIRE */ "recovery.openSettings" = "Ouvrir les réglages";
+/* À TRADUIRE */ "recovery.configureKey" = "Configurer la clé d'accès";
+/* À TRADUIRE */ "recovery.useSaved" = "Utiliser un parcours enregistré";
+/* À TRADUIRE */ "recovery.enableDemo" = "Passer en démonstration";
+/* MARK: profile */
+/* À TRADUIRE */ "profile.electricRoad" = "Vélo de route électrique";
+/* À TRADUIRE */ "profile.road" = "Vélo de route";
+/* À TRADUIRE */ "profile.regular" = "Vélo de ville";
+/* À TRADUIRE */ "profile.mountain" = "VTT";
+/* MARK: direction */
+/* À TRADUIRE */ "direction.any" = "Indifférente";
+/* À TRADUIRE */ "direction.north" = "Nord";
+/* À TRADUIRE */ "direction.east" = "Est";
+/* À TRADUIRE */ "direction.south" = "Sud";
+/* À TRADUIRE */ "direction.west" = "Ouest";
+/* MARK: recalculation */
+/* À TRADUIRE */ "recalculation.automatic" = "Automatique";
+/* À TRADUIRE */ "recalculation.ask" = "Demander d'abord";
+/* À TRADUIRE */ "recalculation.never" = "Ne pas recalculer";
