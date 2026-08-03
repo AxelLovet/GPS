@@ -265,6 +265,7 @@ final class PersistenceServiceTests: XCTestCase {
         let stored = try StoredRide(ride: makeRide())
         let preview = stored.trackPreview(maximumPoints: 40)
         XCTAssertFalse(preview.isEmpty)
-        XCTAssertLessThanOrEqual(preview.count, 42)
+        // Au plus `maximumPoints`, plus le dernier point toujours conservé.
+        XCTAssertLessThanOrEqual(preview.count, 41)
     }
 }
