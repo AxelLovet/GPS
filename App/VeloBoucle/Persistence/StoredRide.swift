@@ -111,10 +111,17 @@ final class StoredRide {
         }
         guard samples.count > maximumPoints else { return samples.map(\.coordinate) }
 
-        let step = samples.count / maximumPoints
+        // Division arrondie **au supérieur**. Avec une division entière simple,
+        // le pas est trop petit et l'échantillonnage dépasse la borne demandée —
+        // de peu, mais assez pour rendre la garantie fausse.
+        let step = (samples.count + maximumPoints - 1) / maximumPoints
         var result = stride(from: 0, to: samples.count, by: max(step, 1))
             .map { samples[$0].coordinate }
-        if let last = samples.last?.coordinate { result.append(last) }
+        // Le dernier point est toujours conservé : c'est l'arrivée, et la
+        // vignette serait tronquée sans lui. D'où au plus `maximumPoints + 1`.
+        if let last = samples.last?.coordinate, result.last != last {
+            result.append(last)
+        }
         return result
     }
 }
