@@ -31,7 +31,7 @@ concurrency:
 
 jobs:
   coeur:
-    name: VeloCore et vérifications (Linux)
+    name: VeloCore (Linux)
     runs-on: ubuntu-latest
     container: swift:6.1-noble
     steps:
@@ -45,6 +45,14 @@ jobs:
 
       - name: Tester VeloCore
         run: swift test --package-path Core
+
+  verifications:
+    name: Vérifications structurelles (Linux)
+    runs-on: ubuntu-latest
+    # Volontairement hors du conteneur Swift : celui-ci ne contient pas Python,
+    # et ces contrôles n'ont besoin que de Python et de git.
+    steps:
+      - uses: actions/checkout@v4
 
       - name: Vérifier la cohérence du projet Xcode
         run: python3 Scripts/validate_pbxproj.py
@@ -101,20 +109,26 @@ jobs:
           echo "nom=$nom" >> "$GITHUB_OUTPUT"
 
       - name: Compiler l'application
+        # `set -o pipefail` est indispensable : sans lui, le code de sortie
+        # d'un tube « xcodebuild | tee » est celui de `tee`, qui réussit
+        # toujours. Une compilation en échec passerait alors pour un succès —
+        # exactement ce qui s'est produit à la première exécution.
         run: |
+          set -o pipefail
           xcodebuild build \
             -project App/VeloBoucle.xcodeproj \
             -scheme VeloBoucle \
             -destination "platform=iOS Simulator,name=${{ steps.simulateur.outputs.nom }}" \
             CODE_SIGNING_ALLOWED=NO \
             | tee build.log \
-            || { tail -60 build.log; exit 1; }
+            || { echo "::group::Erreurs de compilation"; grep -E "error:" build.log | sort -u | head -40; echo "::endgroup::"; exit 1; }
 
       - name: Exécuter les tests unitaires et d'interface
         # Aucune clé API n'est nécessaire : l'application bascule en mode
         # démonstration et les tests d'interface la lancent avec l'argument
         # -VeloBoucleUITesting, qui force le générateur hors ligne.
         run: |
+          set -o pipefail
           xcodebuild test \
             -project App/VeloBoucle.xcodeproj \
             -scheme VeloBoucle \
@@ -122,7 +136,7 @@ jobs:
             -resultBundlePath TestResults.xcresult \
             CODE_SIGNING_ALLOWED=NO \
             | tee test.log \
-            || { tail -80 test.log; exit 1; }
+            || { echo "::group::Échecs"; grep -E "error:|failed" test.log | sort -u | head -40; echo "::endgroup::"; exit 1; }
 
       - name: Conserver les résultats de test
         if: always()
