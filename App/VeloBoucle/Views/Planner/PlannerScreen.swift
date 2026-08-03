@@ -207,18 +207,40 @@ struct PlannerScreen: View {
 
     // MARK: - Liaisons d'étape
 
+    // Ces trois liaisons partagent une subtilité qui a coûté cher : SwiftUI
+    // appelle le *setter* dès que la feuille disparaît — y compris lorsqu'elle
+    // disparaît parce que l'étape a avancé, et non parce que l'utilisateur l'a
+    // fermée. Sans la garde sur l'étape courante, passer de la comparaison à
+    // l'aperçu déclenchait `reset()` et renvoyait aussitôt à l'écran d'accueil.
+    //
+    // La règle : n'annuler que si l'on est encore à l'étape que la feuille
+    // représente. Si l'étape a changé, la disparition est une conséquence
+    // normale de la progression.
+
     private var isGenerating: Binding<Bool> {
-        Binding(get: { model.stage == .generating }, set: { if !$0 { model.cancelGeneration() } })
+        Binding(
+            get: { model.stage == .generating },
+            set: { presented in
+                if !presented, model.stage == .generating { model.cancelGeneration() }
+            }
+        )
     }
 
     private var isComparing: Binding<Bool> {
-        Binding(get: { model.stage == .comparing }, set: { if !$0 { model.reset() } })
+        Binding(
+            get: { model.stage == .comparing },
+            set: { presented in
+                if !presented, model.stage == .comparing { model.reset() }
+            }
+        )
     }
 
     private var isPreviewing: Binding<Bool> {
         Binding(
             get: { model.stage == .previewing },
-            set: { if !$0 { model.backToComparison() } }
+            set: { presented in
+                if !presented, model.stage == .previewing { model.backToComparison() }
+            }
         )
     }
 }
