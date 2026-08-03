@@ -107,7 +107,11 @@ struct RouteMapView: View {
             .mapStyle(.standard(elevation: .realistic))
             .onTapGesture(coordinateSpace: .local) { screenPoint in
                 guard let coordinate = proxy.convert(screenPoint, from: .local) else { return }
-                handleTap(at: GeographicCoordinate(coordinate), proxy: proxy)
+                handleTap(
+                    at: GeographicCoordinate(coordinate),
+                    screenPoint: screenPoint,
+                    proxy: proxy
+                )
             }
         }
     }
@@ -117,21 +121,35 @@ struct RouteMapView: View {
     /// Deux usages se partagent le même geste : désigner un point de départ, et
     /// sélectionner un circuit alternatif en touchant son tracé. Le premier est
     /// prioritaire, car il n'est actif que lorsque l'utilisateur l'a demandé.
-    private func handleTap(at coordinate: GeographicCoordinate, proxy: MapProxy) {
+    private func handleTap(
+        at coordinate: GeographicCoordinate,
+        screenPoint: CGPoint,
+        proxy: MapProxy
+    ) {
         if let onTapCoordinate {
             onTapCoordinate(coordinate)
             return
         }
         guard let onSelectAlternate, !alternates.isEmpty else { return }
 
-        // Tolérance exprimée en mètres et dérivée de l'échelle affichée : à fort
-        // zoom quelques dizaines de mètres suffisent, à faible zoom il en faut
-        // davantage pour qu'un doigt puisse atteindre un trait de 5 points.
-        let tolerance = tapTolerance(proxy: proxy)
-        var closest: (route: CyclingRoute, distance: Double)?
+        // La proximité est mesurée **à l'écran**, pas en mètres.
+        //
+        // C'est à la fois plus juste et plus simple : une tolérance en points
+        // reste constante quel que soit le zoom, alors qu'une tolérance en
+        // mètres devrait être recalculée à partir de l'échelle affichée — que
+        // `MapProxy` n'expose pas avant iOS 18.
+        //
+        // 24 points correspondent grossièrement au rayon d'un doigt sur un
+        // trait dessiné en 5 points de large.
+        let tolerance: CGFloat = 24
+        var closest: (route: CyclingRoute, distance: CGFloat)?
 
         for alternate in alternates {
-            let distance = minimumDistance(from: coordinate, to: alternate.coordinates)
+            let distance = minimumScreenDistance(
+                from: screenPoint,
+                to: alternate.coordinates,
+                proxy: proxy
+            )
             if closest == nil || distance < closest!.distance {
                 closest = (alternate, distance)
             }
@@ -142,23 +160,25 @@ struct RouteMapView: View {
         }
     }
 
-    private func tapTolerance(proxy: MapProxy) -> Double {
-        guard let region = proxy.region else { return 150 }
-        // Environ 3 % de la largeur visible, borné pour rester utilisable.
-        let visibleWidth = region.span.longitudeDelta * 111_320
-            * cos(region.center.latitude * .pi / 180)
-        return min(max(visibleWidth * 0.03, 25), 400)
-    }
+    /// Distance à l'écran, en points, entre un appui et le tracé le plus proche.
+    private func minimumScreenDistance(
+        from point: CGPoint,
+        to polyline: [GeographicCoordinate],
+        proxy: MapProxy
+    ) -> CGFloat {
+        guard !polyline.isEmpty else { return .infinity }
 
-    private func minimumDistance(
-        from coordinate: GeographicCoordinate,
-        to polyline: [GeographicCoordinate]
-    ) -> Double {
-        guard polyline.count > 1 else { return .infinity }
-        var best = Double.infinity
-        for index in 1..<polyline.count {
-            let projection = Geodesy.project(coordinate, onto: polyline[index - 1], polyline[index])
-            best = min(best, projection.distance)
+        // Les tracés comptent jusqu'à quelques milliers de points ; on
+        // n'en échantillonne qu'une partie. À 25 m d'intervalle, un point sur
+        // quatre reste très en deçà de la tolérance d'un doigt.
+        let step = max(polyline.count / 400, 1)
+        var best = CGFloat.infinity
+
+        for index in stride(from: 0, to: polyline.count, by: step) {
+            guard let projected = proxy.convert(polyline[index].clCoordinate, to: .local) else {
+                continue
+            }
+            best = min(best, hypot(projected.x - point.x, projected.y - point.y))
         }
         return best
     }
