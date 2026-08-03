@@ -423,6 +423,13 @@ enum RouteSplicer {
         rejoiningAt rejoin: GeographicCoordinate,
         profile: CyclingProfile
     ) -> CyclingRoute {
+        // Un itinéraire de rattrapage inexploitable — vide ou réduit à un point —
+        // doit laisser le circuit **intact**. Sans cette garde, le recollement
+        // produisait un tracé amputé de son premier point : la vérification de
+        // longueur en aval passait (le reste du circuit suffit à la satisfaire)
+        // et l'utilisateur se retrouvait guidé depuis un départ décalé.
+        guard connector.coordinates.count >= 2 else { return original }
+
         // Point du circuit d'origine le plus proche du point de reprise.
         var rejoinIndex = 0
         var bestDistance = Double.infinity
