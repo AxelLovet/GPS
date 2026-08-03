@@ -1,0 +1,134 @@
+name: Intégration continue
+
+# Compile et teste VéloBoucle à chaque envoi de code.
+#
+# Ce workflow existe pour une raison précise : une application iOS ne peut être
+# compilée que sur macOS, avec Xcode. Si vous développez depuis Windows ou
+# Linux, ce fichier est votre compilateur — GitHub fournit des machines macOS et
+# exécute tout ici.
+#
+# Deux tâches, volontairement séparées :
+#
+#   « coeur »  tourne sur Linux et couvre le paquet VeloCore, ses 124 tests et
+#              les vérifications structurelles. Rapide, et facturé au tarif
+#              Linux (multiplicateur 1x).
+#   « ios »    tourne sur macOS, compile l'application complète et exécute les
+#              tests unitaires et d'interface dans le simulateur. Facturé au
+#              tarif macOS (multiplicateur 10x sur les dépôts privés), d'où
+#              l'intérêt de faire échouer au plus tôt sur Linux.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+# Une nouvelle poussée annule la précédente : inutile de consommer des minutes
+# macOS pour un commit déjà remplacé.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  coeur:
+    name: VeloCore et vérifications (Linux)
+    runs-on: ubuntu-latest
+    container: swift:6.1-noble
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Version de Swift
+        run: swift --version
+
+      - name: Compiler VeloCore
+        run: swift build --package-path Core
+
+      - name: Tester VeloCore
+        run: swift test --package-path Core
+
+      - name: Vérifier la cohérence du projet Xcode
+        run: python3 Scripts/validate_pbxproj.py
+
+      - name: Vérifier que les catalogues de traduction sont à jour
+        run: |
+          python3 Scripts/extract_strings.py
+          if ! git diff --quiet -- App/VeloBoucle/Resources; then
+            echo "::error::Les catalogues de traduction ne sont pas à jour."
+            echo "Lancez « python3 Scripts/extract_strings.py » et committez le résultat."
+            git diff --stat -- App/VeloBoucle/Resources
+            exit 1
+          fi
+
+  ios:
+    name: Application iOS (macOS)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Version de Xcode
+        run: xcodebuild -version
+
+      - name: Choisir un simulateur iPhone disponible
+        id: simulateur
+        # Le nom des simulateurs installés change d'une image de runner à
+        # l'autre. On interroge donc la liste plutôt que de figer « iPhone 15 »,
+        # qui finirait par disparaître.
+        run: |
+          nom=$(xcrun simctl list devices available --json | python3 -c "
+          import json, re, sys
+          appareils = json.load(sys.stdin)['devices']
+          candidats = [
+              appareil['name']
+              for runtime, liste in appareils.items() if 'iOS' in runtime
+              for appareil in liste
+          ]
+          iphones = [nom for nom in candidats if nom.startswith('iPhone')]
+          # Préférence au modèle numéroté le plus récent (« iPhone 16 ») ; un
+          # tri alphabétique placerait « iPhone SE » en tête, ce qui marche mais
+          # teste un écran nettement plus petit.
+          numerotes = [
+              (int(m.group(1)), nom) for nom in iphones
+              if (m := re.fullmatch(r'iPhone (\d+)', nom))
+          ]
+          print(max(numerotes)[1] if numerotes else (sorted(iphones)[0] if iphones else ''))
+          ")
+          if [ -z "$nom" ]; then
+            echo "::error::Aucun simulateur iPhone disponible sur ce runner."
+            xcrun simctl list devices available
+            exit 1
+          fi
+          echo "Simulateur retenu : $nom"
+          echo "nom=$nom" >> "$GITHUB_OUTPUT"
+
+      - name: Compiler l'application
+        run: |
+          xcodebuild build \
+            -project App/VeloBoucle.xcodeproj \
+            -scheme VeloBoucle \
+            -destination "platform=iOS Simulator,name=${{ steps.simulateur.outputs.nom }}" \
+            CODE_SIGNING_ALLOWED=NO \
+            | tee build.log \
+            || { tail -60 build.log; exit 1; }
+
+      - name: Exécuter les tests unitaires et d'interface
+        # Aucune clé API n'est nécessaire : l'application bascule en mode
+        # démonstration et les tests d'interface la lancent avec l'argument
+        # -VeloBoucleUITesting, qui force le générateur hors ligne.
+        run: |
+          xcodebuild test \
+            -project App/VeloBoucle.xcodeproj \
+            -scheme VeloBoucle \
+            -destination "platform=iOS Simulator,name=${{ steps.simulateur.outputs.nom }}" \
+            -resultBundlePath TestResults.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            | tee test.log \
+            || { tail -80 test.log; exit 1; }
+
+      - name: Conserver les résultats de test
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultats-tests-ios
+          path: TestResults.xcresult
+          retention-days: 7
+          if-no-files-found: ignore
