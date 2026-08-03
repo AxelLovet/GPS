@@ -35,9 +35,16 @@ final class VeloBoucleUITests: XCTestCase {
     /// lancement ; la laisser affichée bloquerait toute interaction.
     private func dismissLocationPromptIfPresented() {
         let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
-        let allow = springboard.buttons["Lorsque l'app est active"]
-        if allow.waitForExistence(timeout: 3) {
-            allow.tap()
+        // La langue du simulateur n'est pas garantie : un runner d'intégration
+        // continue est le plus souvent en anglais. On essaie les deux libellés
+        // plutôt que de supposer le français.
+        let libelles = ["Lorsque l'app est active", "While Using the App", "Autoriser", "Allow"]
+        for libelle in libelles {
+            let bouton = springboard.buttons[libelle]
+            if bouton.waitForExistence(timeout: 2) {
+                bouton.tap()
+                return
+            }
         }
     }
 
@@ -147,7 +154,19 @@ final class VeloBoucleUITests: XCTestCase {
     func testSettingsExposeProfileAndNavigationOptions() {
         app.tabBars.buttons["Réglages"].tap()
         XCTAssertTrue(app.navigationBars["Réglages"].waitForExistence(timeout: 10))
-        XCTAssertTrue(app.staticTexts["Vélo de route électrique"].exists)
+
+        // Le profil de vélo est présenté par un `Picker` en style « inline » :
+        // ses options ne sont pas des `StaticText` mais des cellules
+        // sélectionnables, et leur type exact varie d'une version d'iOS à
+        // l'autre. On interroge donc l'ensemble des descendants.
+        let profil = app.descendants(matching: .any)
+            .matching(identifier: "Vélo de route électrique")
+            .firstMatch
+        XCTAssertTrue(
+            profil.waitForExistence(timeout: 5),
+            "le profil de vélo n'apparaît pas dans les Réglages"
+        )
+
         XCTAssertTrue(app.switches["Instructions vocales"].exists)
     }
 
